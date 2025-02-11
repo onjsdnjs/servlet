@@ -23,7 +23,7 @@ public class ListControllerServlet extends HttpServlet {
         List<Member> members = memberRepository.findAll();
         request.setAttribute("members", members);
 
-        String viewPath = "/WEB-INF/jsp/model2/list.jsp";
+        String viewPath = "/WEB-INF/jsp/list.jsp";
         request.getRequestDispatcher(viewPath).forward(request, response);
     }
 }

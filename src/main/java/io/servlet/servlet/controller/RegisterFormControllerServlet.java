@@ -15,7 +15,7 @@ public class RegisterFormControllerServlet extends HttpServlet {
             throws ServletException, IOException {
 
         // 뷰(JSP)로 포워딩
-        String viewPath = "/WEB-INF/jsp/model2/registerForm.jsp";
+        String viewPath = "/WEB-INF/jsp/registerForm.jsp";
         request.getRequestDispatcher(viewPath).forward(request, response);
     }
 }
