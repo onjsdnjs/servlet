@@ -2,11 +2,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Register Form - Model2</title>
+    <title>Front Controller - Register Form</title>
 </head>
 <body>
-<h1>Register Form (Model2)</h1>
-<form action="<%= request.getContextPath() %>/model2/register" method="post">
+<h1>Register Form (Front Controller)</h1>
+<form action="${pageContext.request.contextPath}/front-controller/members/save" method="post">
     Username: <input type="text" name="username"><br>
     Password: <input type="password" name="password"><br>
     <button type="submit">Register</button>

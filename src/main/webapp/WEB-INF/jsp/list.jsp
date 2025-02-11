@@ -4,15 +4,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Member List - Model2</title>
+    <title>Front Controller - Member List</title>
 </head>
 <body>
-<h1>Member List (Model2)</h1>
+<h1>Member List (Front Controller)</h1>
 <%
     List<Member> members = (List<Member>) request.getAttribute("members");
-    if (members == null) {
-        members = List.of();
-    }
+    if (members == null || members.isEmpty()) {
+%>
+<p>No members found.</p>
+<%
+} else {
 %>
 <ul>
     <%
@@ -23,6 +25,9 @@
         }
     %>
 </ul>
-<a href="<%= request.getContextPath() %>/model2/registerForm">Go to Register Form</a>
+<%
+    }
+%>
+<a href="<%= request.getContextPath() %>/front-controller/members/new-form">Go to Register Form</a>
 </body>
 </html>
