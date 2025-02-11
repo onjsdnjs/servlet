@@ -13,6 +13,6 @@ public class MemberFormController implements Controller {
             throws ServletException, IOException {
 
         // 단순히 폼 화면(JSP)으로 forward
-        return "/WEB-INF/views/frontcontroller/form.jsp";
+        return "/WEB-INF/views/form.jsp";
     }
 }

@@ -21,6 +21,6 @@ public class MemberListController implements Controller {
         request.setAttribute("members", members);
 
         // 목록 화면 JSP로 forward
-        return "/WEB-INF/views/frontcontroller/list.jsp";
+        return "/WEB-INF/views/list.jsp";
     }
 }
