@@ -1,4 +1,4 @@
-<%@ page import="io.servlet.servlet.Member" %>
+<%@ page import="io.servlet.servlet.model.Member" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.List" %>
 <%

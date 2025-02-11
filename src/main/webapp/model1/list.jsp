@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
-<%@ page import="io.servlet.servlet.Member" %>
+<%@ page import="io.servlet.servlet.model.Member" %>
 <%@ page import="java.util.List" %>
 <!DOCTYPE html>
 <html>

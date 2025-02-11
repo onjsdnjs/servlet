@@ -1,4 +1,4 @@
-package io.servlet.servlet;
+package io.servlet.servlet.model;
 
 public class Member {
     private String username;
