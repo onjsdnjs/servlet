@@ -20,7 +20,7 @@ public class HttpRequestServletApi extends HttpServlet {
 
         response.setContentType("text/plain; charset=UTF-8");
         PrintWriter out = response.getWriter();
-
+        printLine(out, "");
         printLine(out, "==== [ HttpServletRequest API 테스트 ] ====");
         printLine(out, "");
 
@@ -64,7 +64,7 @@ public class HttpRequestServletApi extends HttpServlet {
         // 3) 세션 관련
         // -------------------------------------------------------
         printLine(out, "[3] 세션 관련 ------------------------");
-        HttpSession session = request.getSession(false); // create = false
+        HttpSession session = request.getSession(true);
 
         if (session == null) {
             printLine(out, "세션이 없습니다. (session == null)");
