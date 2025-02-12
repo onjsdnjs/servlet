@@ -11,7 +11,7 @@ import java.io.PrintWriter;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-@WebServlet(name = "formDataServlet", urlPatterns = "/form-test")
+@WebServlet(name = "formDataServlet", urlPatterns = "/formTest")
 public class FormDataServlet extends HttpServlet {
 
     // (1) GET 방식

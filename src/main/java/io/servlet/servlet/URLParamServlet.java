@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-@WebServlet(name = "urlParamServlet", urlPatterns = "/url-param")
+@WebServlet(name = "urlParamServlet", urlPatterns = "/urlParam")
 public class URLParamServlet extends HttpServlet {
 
     @Override

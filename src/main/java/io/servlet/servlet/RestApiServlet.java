@@ -14,7 +14,7 @@ import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 
-@WebServlet(name = "restApiServlet", urlPatterns = "/rest-test")
+@WebServlet(name = "restApiServlet", urlPatterns = "/restTest")
 public class RestApiServlet extends HttpServlet {
 
     private ObjectMapper objectMapper = new ObjectMapper();
