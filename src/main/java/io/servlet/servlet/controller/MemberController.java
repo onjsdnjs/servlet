@@ -2,7 +2,6 @@ package io.servlet.servlet.controller;
 
 import io.servlet.servlet.model.Member;
 import io.servlet.servlet.model.MemberRepository;
-import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,29 +20,22 @@ public class MemberController {
 
     @GetMapping("/members/new-form")
     public String showForm() {
-        return "frontcontroller/form";
+        return "form";
     }
 
-    // 회원 저장
     @PostMapping("/members/save")
-    public String saveMember(HttpServletRequest request, Model model) {
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-
-        Member member = new Member(username, password);
+    public String saveMember(Member member, Model model) {
         memberRepository.save(member);
-
         model.addAttribute("member", member);
 
-        return "frontcontroller/save-result";
+        return "save-result";
     }
 
-    // 회원 목록
     @GetMapping("/members/list")
     public String listMembers(Model model) {
         List<Member> members = memberRepository.findAll();
         model.addAttribute("members", members);
 
-        return "frontcontroller/list";
+        return "list";
     }
 }
