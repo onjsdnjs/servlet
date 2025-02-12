@@ -1,10 +1,13 @@
 package io.servlet.servlet.model;
 
+import org.springframework.stereotype.Repository;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+@Repository
 public class MemberRepository {
 
     private static final Map<String, Member> store = new ConcurrentHashMap<>();
