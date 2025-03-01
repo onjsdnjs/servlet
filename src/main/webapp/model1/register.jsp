@@ -23,5 +23,5 @@
     application.setAttribute("memberList", memberList);
 
     // 저장 후 리스트 페이지로 이동
-    response.sendRedirect(request.getContextPath() + "/model1/list.jsp");
+    response.sendRedirect("/model1/list.jsp");
 %>

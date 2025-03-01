@@ -23,6 +23,6 @@
         }
     %>
 </ul>
-<a href="<%= request.getContextPath() %>/model1/registerForm.jsp">Go to Register Form</a>
+<a href="/model1/registerForm.jsp">Go to Register Form</a>
 </body>
 </html>
