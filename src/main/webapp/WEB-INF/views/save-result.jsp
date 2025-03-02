@@ -18,6 +18,6 @@
 <%
     }
 %>
-<a href="<%= request.getContextPath() %>/front-controller/members/list">Member List</a>
+<a href="/front-controller/members/list">Member List</a>
 </body>
 </html>

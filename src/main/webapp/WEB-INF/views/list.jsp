@@ -10,7 +10,6 @@
 <h1>Member List (Front Controller)</h1>
 <%
     List<Member> members = (List<Member>) request.getAttribute("members");
-    if (members == null || members.isEmpty()) {
 %>
 <p>No members found.</p>
 <%
@@ -28,6 +27,6 @@
 <%
     }
 %>
-<a href="<%= request.getContextPath() %>/front-controller/members/new-form">Go to Register Form</a>
+<a href="/front-controller/members/new-form">Go to Register Form</a>
 </body>
 </html>
