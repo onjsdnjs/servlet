@@ -1,13 +1,13 @@
 package io.servlet.servlet.model;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 public class MemberRepository {
 
-    private static final Map<String, Member> store = new ConcurrentHashMap<>();
+    private static final Map<String, Member> store = new HashMap<>();
 
     // 회원 저장
     public void save(Member member) {
