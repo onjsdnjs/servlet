@@ -10,7 +10,6 @@
 <h1>Member List (Model2)</h1>
 <%
     List<Member> members = (List<Member>) request.getAttribute("members");
-
 %>
 <ul>
     <%
