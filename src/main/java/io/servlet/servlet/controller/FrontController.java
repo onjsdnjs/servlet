@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @WebServlet(name = "frontControllerServlet", urlPatterns = "/front-controller/*")
-public class FrontControllerServlet extends HttpServlet {
+public class FrontController extends HttpServlet {
 
     // 요청 URL -> Controller 매핑정보
     private Map<String, Controller> controllerMap = new HashMap<>();
@@ -39,7 +39,6 @@ public class FrontControllerServlet extends HttpServlet {
         // 해당 컨트롤러(핸들러) 실행
         String viewPath = controller.process(request, response);
 
-        // 단순 forward 처리 (redirect가 필요한 경우는 return 값에 "redirect:" prefix 등을 붙이는 등 별도 로직 가능)
         request.getRequestDispatcher(viewPath).forward(request, response);
     }
 }
