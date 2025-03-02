@@ -10,9 +10,7 @@
 <h1>Member List (Model2)</h1>
 <%
     List<Member> members = (List<Member>) request.getAttribute("members");
-    if (members == null) {
-        members = List.of();
-    }
+
 %>
 <ul>
     <%
@@ -23,6 +21,6 @@
         }
     %>
 </ul>
-<a href="<%= request.getContextPath() %>/model2/registerForm">Go to Register Form</a>
+<a href="/model2/registerForm">Go to Register Form</a>
 </body>
 </html>
