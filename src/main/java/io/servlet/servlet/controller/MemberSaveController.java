@@ -27,6 +27,6 @@ public class MemberSaveController implements Controller {
         request.setAttribute("member", member);
 
         // 저장 완료 페이지로 forward
-        return "/WEB-INF/views/save-result.jsp";
+        return "/WEB-INF/views/result.jsp";
     }
 }

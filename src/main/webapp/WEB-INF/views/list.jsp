@@ -12,9 +12,6 @@
     List<Member> members = (List<Member>) request.getAttribute("members");
 %>
 <p>No members found.</p>
-<%
-} else {
-%>
 <ul>
     <%
         for (Member m : members) {
@@ -24,9 +21,6 @@
         }
     %>
 </ul>
-<%
-    }
-%>
 <a href="/front-controller/members/new-form">Go to Register Form</a>
 </body>
 </html>
