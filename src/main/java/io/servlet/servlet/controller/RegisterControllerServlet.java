@@ -26,9 +26,6 @@ public class RegisterControllerServlet extends HttpServlet {
         Member newMember = new Member(username, password);
         memberRepository.save(newMember);
 
-        // 모델의 결과를 request attribute 등에 저장 (생략 가능)
-        request.setAttribute("member", newMember);
-
         // 리스트 페이지로 리다이렉트
         response.sendRedirect(request.getContextPath() + "/model2/list");
     }
