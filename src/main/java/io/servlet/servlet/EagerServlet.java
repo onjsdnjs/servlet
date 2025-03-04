@@ -8,7 +8,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet(name = "EagerServlet", urlPatterns = "/eager-servlet")
+@WebServlet(name = "EagerServlet", urlPatterns = "/eager-servlet", loadOnStartup = 2)
 public class EagerServlet extends HttpServlet {
 
     @Override

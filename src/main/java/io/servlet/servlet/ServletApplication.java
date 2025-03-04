@@ -14,19 +14,4 @@ public class ServletApplication {
         SpringApplication.run(ServletApplication.class, args);
     }
 
-    @Bean
-    public ServletRegistrationBean<LazyServlet> lazyServlet() {
-        ServletRegistrationBean<LazyServlet> bean = new ServletRegistrationBean<>(new LazyServlet(), "/lazy-servlet");
-//        bean.setLoadOnStartup(0);  // 요청이 올 때까지 로드 안 함
-        return bean;
-    }
-
-    // EagerServlet: loadOnStartup(1) 설정 -> 서버 시작 시 즉시 로드
-    @Bean
-    public ServletRegistrationBean<EagerServlet> eagerServlet() {
-        ServletRegistrationBean<EagerServlet> bean = new ServletRegistrationBean<>(new EagerServlet(), "/eager-servlet");
-        bean.setLoadOnStartup(1);  // 서버 시작 시 로드됨
-        return bean;
-    }
-
 }

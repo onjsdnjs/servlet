@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "lifecycleServlet", urlPatterns = "/lifecycle")
+@WebServlet(name = "lifecycleServlet", urlPatterns = "/lifecycle", loadOnStartup = 1)
 public class LifecycleServlet extends HttpServlet {
 
     // 생성자 호출 시점 확인
