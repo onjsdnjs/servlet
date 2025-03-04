@@ -34,8 +34,12 @@ public class MemberController {
         System.out.println("Native Request URI: " + requestURI);
 
         // 네이티브 HttpServletResponse 활용하여 응답 작성
-        webRequest.getResponse().setStatus(HttpServletResponse.SC_OK);
-        webRequest.getResponse().getWriter().write("successful");
+        HttpServletResponse response = webRequest.getNativeResponse(HttpServletResponse.class);
+        response.setStatus(HttpServletResponse.SC_OK);
+        response.getWriter().write("successful");
+
+//        webRequest.getResponse().setStatus(HttpServletResponse.SC_OK);
+//        webRequest.getResponse().getWriter().write("successful");
     }
 
 }
