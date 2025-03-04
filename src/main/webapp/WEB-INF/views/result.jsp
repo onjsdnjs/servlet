@@ -9,15 +9,9 @@
 <h1>Save Result</h1>
 <%
     Member member = (Member) request.getAttribute("member");
-    if (member == null) {
-        out.println("<p>No member data found.</p>");
-    } else {
 %>
 <p>username = <%= member.getUsername() %></p>
 <p>password = <%= member.getPassword() %></p>
-<%
-    }
-%>
-<a href="<%= request.getContextPath() %>/front-controller/members/list">Member List</a>
+<a href="/front-controller/members/list">Member List</a>
 </body>
 </html>

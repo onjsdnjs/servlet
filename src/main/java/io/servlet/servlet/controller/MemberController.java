@@ -28,7 +28,7 @@ public class MemberController {
         memberRepository.save(member);
         model.addAttribute("member", member);
 
-        return "save-result";
+        return "result";
     }
 
     @GetMapping("/members/list")

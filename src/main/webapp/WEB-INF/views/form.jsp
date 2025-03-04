@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Register Form (Front Controller)</h1>
-<form action="${pageContext.request.contextPath}/front-controller/members/save" method="post">
+<form action="/front-controller/members/save" method="post">
     Username: <input type="text" name="username"><br>
     Password: <input type="password" name="password"><br>
     <button type="submit">Register</button>
