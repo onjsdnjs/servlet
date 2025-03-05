@@ -25,6 +25,7 @@ public class HttpServletRequestApi extends HttpServlet {
         printLine(out, "==== [ HttpServletRequest API 테스트 ] ====");
         printLine(out, "");
 
+
         // -------------------------------------------------------
         // 1) Header 관련 API
         // -------------------------------------------------------
