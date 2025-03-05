@@ -34,6 +34,7 @@ public class HttpServletRequestApi extends HttpServlet {
                     printLine(out, " - " + headerName);
                 });
 
+
         printLine(out, "특정 헤더 'User-Agent': " + request.getHeader("User-Agent"));
 
         // 다중 값이 있을 수 있는 헤더 예시
