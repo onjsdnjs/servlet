@@ -12,7 +12,7 @@ import java.io.PrintWriter;
 import java.util.Collections;
 
 @WebServlet(name = "requestInfoServlet", urlPatterns = "/requestApi")
-public class HttpRequestServletApi extends HttpServlet {
+public class HttpServletRequestApi extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -60,6 +60,7 @@ public class HttpRequestServletApi extends HttpServlet {
         printLine(out, "request.getServletPath(): " + request.getServletPath());
         printLine(out, "request.getPathInfo(): " + request.getPathInfo());
         printLine(out, "");
+
 
         // -------------------------------------------------------
         // 3) 세션 관련
