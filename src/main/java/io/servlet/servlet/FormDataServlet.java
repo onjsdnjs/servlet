@@ -38,6 +38,7 @@ public class FormDataServlet extends HttpServlet {
         out.println("전체 파라미터: " + allParams);
     }
 
+
     // (2) POST 방식
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
