@@ -6,6 +6,9 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -35,41 +38,12 @@ public class JsonResponseServlet extends HttpServlet {
         out.close();
     }
 
+    @Data
+    @AllArgsConstructor
+    @NoArgsConstructor
     public static class Message {
         private String title;
         private String content;
         private int count;
-
-        // 기본 생성자
-        public Message() {}
-
-        // 필드를 모두 받는 생성자
-        public Message(String title, String content, int count) {
-            this.title = title;
-            this.content = content;
-            this.count = count;
-        }
-
-        // Getter/Setter 메서드
-        public String getTitle() {
-            return title;
-        }
-        public void setTitle(String title) {
-            this.title = title;
-        }
-
-        public String getContent() {
-            return content;
-        }
-        public void setContent(String content) {
-            this.content = content;
-        }
-
-        public int getCount() {
-            return count;
-        }
-        public void setCount(int count) {
-            this.count = count;
-        }
     }
 }
