@@ -20,6 +20,7 @@ public class HttpRequestServletApi extends HttpServlet {
 
         response.setContentType("text/plain; charset=UTF-8");
         PrintWriter out = response.getWriter();
+
         printLine(out, "");
         printLine(out, "==== [ HttpServletRequest API 테스트 ] ====");
         printLine(out, "");
@@ -29,19 +30,19 @@ public class HttpRequestServletApi extends HttpServlet {
         // -------------------------------------------------------
         printLine(out, "[1] Header 관련 ----------------------");
         Collections.list(request.getHeaderNames())
-                .stream()
                 .forEach(headerName -> {
                     printLine(out, " - " + headerName);
                 });
 
         printLine(out, "특정 헤더 'User-Agent': " + request.getHeader("User-Agent"));
 
-        // 다중 값이 있을 수 있는 헤더 예시 (예: 쿠키)
+        // 다중 값이 있을 수 있는 헤더 예시
         String cookieHeader = "Cookie";
         if (request.getHeader(cookieHeader) != null) {
+
             printLine(out, "쿠키 헤더의 모든 값:");
+
             Collections.list(request.getHeaders(cookieHeader))
-                    .stream()
                     .forEach(value -> {
                         printLine(out, " - " + value);
                     });
@@ -68,6 +69,7 @@ public class HttpRequestServletApi extends HttpServlet {
 
         if (session == null) {
             printLine(out, "세션이 없습니다. (session == null)");
+
         } else {
             printLine(out, "세션 ID: " + session.getId());
             printLine(out, "요청된 세션 ID: " + request.getRequestedSessionId());
@@ -75,7 +77,6 @@ public class HttpRequestServletApi extends HttpServlet {
             // 세션 속성 조회
             printLine(out, "세션 속성 목록:");
             Collections.list(session.getAttributeNames())
-                    .stream()
                     .forEach(attrName -> {
                         Object val = session.getAttribute(attrName);
                         printLine(out, " - " + attrName + " : " + val);
@@ -88,21 +89,22 @@ public class HttpRequestServletApi extends HttpServlet {
         // -------------------------------------------------------
         printLine(out, "[4] request 속성 관련 ----------------");
         printLine(out, "현재 request attribute 목록:");
+        printLine(out, "");
+
         Collections.list(request.getAttributeNames())
-                .stream()
                 .forEach(attrName -> {
                     Object val = request.getAttribute(attrName);
                     printLine(out, " - " + attrName + " : " + val);
                 });
 
         // 예시) 속성 추가
-        request.setAttribute("sampleAttr", "샘플 값");
-        printLine(out, "sampleAttr 속성 추가 후 확인:");
-        printLine(out, "sampleAttr = " + request.getAttribute("sampleAttr"));
+        request.setAttribute("customAttr", "customValue");
+        printLine(out, "customAttr 속성 추가 후 확인:");
+        printLine(out, "customAttr = " + request.getAttribute("customAttr"));
 
         // 속성 제거
-        request.removeAttribute("sampleAttr");
-        printLine(out, "sampleAttr 제거 후 값: " + request.getAttribute("sampleAttr"));
+        request.removeAttribute("customAttr");
+        printLine(out, "customAttr 제거 후 값: " + request.getAttribute("customAttr"));
         printLine(out, "");
 
         // -------------------------------------------------------
