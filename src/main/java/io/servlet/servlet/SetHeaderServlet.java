@@ -16,10 +16,11 @@ public class SetHeaderServlet extends HttpServlet {
             throws ServletException, IOException {
 
         // Cache-Control 헤더를 no-cache로 설정
-        response.setHeader("Cache-Control", "no-cache");
+        response.setHeader("X-Custom-Header", "X-Custom-Value1");
+        response.setHeader("X-Custom-Header", "X-Custom-Value2");
 
         // 응답 바디
         response.setContentType("text/plain; charset=UTF-8");
-        response.getWriter().println("Cache-Control: no-cache 헤더가 설정되었습니다.");
+        response.getWriter().println("X-Custom-Header: X-Custom-Value 헤더가 설정되었습니다.");
     }
 }

@@ -16,6 +16,6 @@ public class SendErrorServlet extends HttpServlet {
             throws ServletException, IOException {
 
         // 404 Not Found 에러를 보낸다.
-        response.sendError(HttpServletResponse.SC_NOT_FOUND, "해당 페이지를 찾을 수 없습니다.");
+        response.sendError(HttpServletResponse.SC_METHOD_NOT_ALLOWED, "잘못된 요청 방식입니다.");
     }
 }

@@ -16,6 +16,6 @@ public class SendRedirectServlet extends HttpServlet {
             throws ServletException, IOException {
 
         // /final-destination 경로로 리다이렉트
-        response.sendRedirect("/final-destination");
+        response.sendRedirect("/home.html");
     }
 }

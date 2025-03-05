@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "addCookieServlet", urlPatterns = "/adCookie")
+@WebServlet(name = "addCookieServlet", urlPatterns = "/addCookie")
 public class AddCookieServlet extends HttpServlet {
 
     @Override

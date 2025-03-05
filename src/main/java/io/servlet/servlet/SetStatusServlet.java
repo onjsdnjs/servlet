@@ -16,10 +16,10 @@ public class SetStatusServlet extends HttpServlet {
             throws ServletException, IOException {
 
         // 200 OK 로 설정
-        response.setStatus(HttpServletResponse.SC_OK);
+        response.setStatus(HttpServletResponse.SC_FORBIDDEN);
 
         // 브라우저에 메시지 전송
         response.setContentType("text/plain; charset=UTF-8");
-        response.getWriter().println("HTTP Status를 200 OK로 설정했습니다.");
+        response.getWriter().println("HTTP Status를 403 FORBIDDEN  설정했습니다.");
     }
 }
